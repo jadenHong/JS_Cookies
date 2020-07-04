@@ -152,12 +152,6 @@ function calcOrder() {
 		return phoneNumber.focus();
 	}
 	var Info = custInfo();
-
-	/* if (fnameFormat && lnameFormat && phoneFormat) {
-		var Info = custInfo();
-	} else {
-		return false;
-	} */
 	var pizza = calcPizza();
 	var sandwich = calcSandwich();
 	var drink = calcDrink();
@@ -247,7 +241,7 @@ console.log(cvalue);
 	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
 	var expires = "expires=" + d.toUTCString();
 	document.cookie = cname + "=" + cvalue + ";" + expires+";date="+d+ ";path=/";
-	// console.log(document.cookie);
+	console.log(document.cookie);
 	localStorage.setItem("username", cvalue);
 }
 
